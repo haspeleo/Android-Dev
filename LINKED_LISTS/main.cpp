@@ -19,7 +19,6 @@ struct node {
     struct node *next;
 };
 
-
 struct node * buildOneTwoThree() {
 
     struct node* head = NULL;
@@ -204,7 +203,7 @@ void insertNTh(struct node* &head, int index, int data) {
     }
 }
 /*===========================================================================*/
-/*                          MAIN PROGRAM                                     */
+/*                          MAIN PROGRAM                                                                                                 */
 /*===========================================================================*/
 
 int main(int argc, char** argv) {
