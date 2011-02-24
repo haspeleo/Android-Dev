@@ -17,7 +17,7 @@
 // This code is copyrighted and has limited warranty. //****************
 //*********************************************
 
-#include "windows.h"
+//#include "windows.h"
 //#include <stdio.h>
 //#include <stdlib.h>
 #include <cstdlib>
@@ -107,7 +107,7 @@ static int nMove; // represents the last move made by the current player
 
 int main() {
 	seed_random_generator();
-	setup_game_screen();
+	//setup_game_screen(); //HAS: resizing DOS window
 
 	display_intro();
 	select_game_type();
