@@ -196,6 +196,14 @@ void insertNTh(struct node* &head, int index, int data) {
         pushAtHead(current->next, data);
     }
 }
+
+void sortedInsert(struct node* &head, struct node* newNode) {
+    struct node* current = head;
+    while(current != NULL && current->data <= newNode->data) {
+        current = current->next;
+    }
+    pushAtHead(current->next, newNode->data);
+}
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
 /*===========================================================================*/
@@ -241,8 +249,19 @@ int main(int argc, char** argv) {
     insertNTh(head, 1, 5);
     printList(head);
 
+    cout <<"This is a sorted list"<<endl;
+    deleteList(head);
+    for(int i = 0; i < 5; i++) {
+        pushAtEnd(head, i * 2);
+    }
+    printList(head);
+    cout <<"given an element, insert it in a sorted list"<<endl;
+    int value = 1;
+    struct node* newNode = (struct node*)malloc(sizeof (struct node));
+    newNode->data = value;
+    sortedInsert(head, newNode);
+    printList(head);
 
-   
     cout<<" ==== Quick using of lists using STL ===="<<endl;
 
     list<char> listObject;
