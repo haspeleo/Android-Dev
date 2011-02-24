@@ -181,26 +181,18 @@ int pop(struct node* &head) {
 }
 
 void insertNTh(struct node* &head, int index, int data) {
-    int count = 0;
-    struct node* current = head;
 
-    if (head == NULL) {
-        struct node* newNode = (struct node*)malloc(sizeof(struct node));
-        newNode->data = data;
-        newNode->next = NULL;
-        head = newNode;
+    if(index == 0) {
+        pushAtHead(head, data);
     }
     else {
-        while(current->next != NULL && index != count) {
-            count ++;
+        struct node *current = head;
+        for(int i = 0; i< index - 1; i++) {
+            assert(current->next !=NULL);
             current = current->next;
         }
-        struct node* newNode = (struct node*)malloc(sizeof(struct node));
-        struct node* tail = current->next;
-        newNode = current;
-        
-        newNode->data = data;
-        newNode->next = tail;
+        assert(current != NULL);
+        pushAtHead(current->next, data);
     }
 }
 /*===========================================================================*/
@@ -239,9 +231,9 @@ int main(int argc, char** argv) {
     printList(head);
     cout <<"longueur de la liste: "<<length(head)<<endl;
 
-    cout <<"Deleting the hole list "<<endl;
-    deleteList(head);
-    printList(head);
+//    cout <<"Deleting the hole list "<<endl;
+//    deleteList(head);
+//    printList(head);
 
     insertNTh(head, 0, 13);
     insertNTh(head, 1, 42);
