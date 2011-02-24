@@ -6,7 +6,6 @@
  */
 
 
-
 #include <cstdlib>
 #include<iostream>
 #include <assert.h>
@@ -199,14 +198,26 @@ void insertNTh(struct node* &head, int index, int data) {
 
 void sortedInsert(struct node* &head, struct node* newNode) {
     struct node* current = head;
-    while (current != NULL && current->data <= newNode->data ) {
-        if (current->data <= newNode->data) {
-            current = current->next;
-            cout << "INSIDE loop Current is pointing to " << current->data << endl;
-        }
+    if (head == NULL || current->data >= newNode->data) {
+        newNode->next = head;
+        head = newNode;
     }
-    cout << "Current is pointing to " << current->data << endl;
-    pushAtHead(current->next, newNode->data);
+    else {
+        //Locate the node before the point of insertion
+        while (current->next != NULL && current->next->data < newNode->data ) {
+            current = current->next;
+        }
+        newNode->next = current->next;
+        current->next = newNode;
+    }  
+}
+
+void insertSort(struct node* &head) {
+    struct node* current = head;
+    while(current->next != NULL) {
+        sortedInsert(head, current);
+        current = current->next;
+    }
 }
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
@@ -224,8 +235,8 @@ int main(int argc, char** argv) {
 
 
     struct node* myList = NULL;
-//    myList = copyList(head);
-//    printList(myList);
+    myList = copyList(head);
+    printList(myList);
     myList = copyListRecursive(head);
     printList(myList);
 
@@ -248,10 +259,15 @@ int main(int argc, char** argv) {
     deleteList(head);
     printList(head);
 
-    insertNTh(head, 0, 13);
-    insertNTh(head, 1, 42);
+    insertNTh(head, 0, 42);
+    insertNTh(head, 1, 13);
     insertNTh(head, 1, 5);
+    insertNTh(head, 1, 71);
     printList(head);
+
+//    cout<<"Sorting list elements in an increasing order"<<endl;
+//    insertSort(head);
+//    printList(head);
 
     cout <<"This is a sorted list"<<endl;
     deleteList(head);
@@ -260,12 +276,13 @@ int main(int argc, char** argv) {
     }
     printList(head);
     cout <<"given an element, insert it in a sorted list"<<endl;
-    int value = 3;
+    int value = 7;
     struct node* newNode = (struct node*)malloc(sizeof (struct node));
     newNode->data = value;
     sortedInsert(head, newNode);
     printList(head);
 
+    
     cout<<" ===== Quick using of lists using STL ====="<<endl;
 
     list<char> listObject;
