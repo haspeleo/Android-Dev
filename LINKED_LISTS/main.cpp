@@ -187,8 +187,9 @@ void insertNTh(struct node* &head, int index, int data) {
     }
     else {
         struct node *current = head;
+
         for(int i = 0; i< index - 1; i++) {
-            assert(current->next !=NULL);
+            assert(current->next != NULL);
             current = current->next;
         }
         assert(current != NULL);
@@ -231,9 +232,9 @@ int main(int argc, char** argv) {
     printList(head);
     cout <<"longueur de la liste: "<<length(head)<<endl;
 
-//    cout <<"Deleting the hole list "<<endl;
-//    deleteList(head);
-//    printList(head);
+    cout <<"Deleting the hole list "<<endl;
+    deleteList(head);
+    printList(head);
 
     insertNTh(head, 0, 13);
     insertNTh(head, 1, 42);
