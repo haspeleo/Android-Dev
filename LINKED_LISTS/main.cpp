@@ -199,9 +199,13 @@ void insertNTh(struct node* &head, int index, int data) {
 
 void sortedInsert(struct node* &head, struct node* newNode) {
     struct node* current = head;
-    while(current != NULL && current->data <= newNode->data) {
-        current = current->next;
+    while (current != NULL && current->data <= newNode->data ) {
+        if (current->data <= newNode->data) {
+            current = current->next;
+            cout << "INSIDE loop Current is pointing to " << current->data << endl;
+        }
     }
+    cout << "Current is pointing to " << current->data << endl;
     pushAtHead(current->next, newNode->data);
 }
 /*===========================================================================*/
@@ -229,7 +233,7 @@ int main(int argc, char** argv) {
     int nbOccurence = count(head, search);
     cout <<"Number of occurance of "<<search<<" = "<<nbOccurence<<endl;
 
-    int index = 3;
+    int index = 1;
     int nth = getNTh(head, index);
     cout <<"The data of "<<index<<"th node = "<<nth<<endl;
     cout <<"longueur de la liste: "<<length(head)<<endl;
@@ -256,13 +260,13 @@ int main(int argc, char** argv) {
     }
     printList(head);
     cout <<"given an element, insert it in a sorted list"<<endl;
-    int value = 1;
+    int value = 3;
     struct node* newNode = (struct node*)malloc(sizeof (struct node));
     newNode->data = value;
     sortedInsert(head, newNode);
     printList(head);
 
-    cout<<" ==== Quick using of lists using STL ===="<<endl;
+    cout<<" ===== Quick using of lists using STL ====="<<endl;
 
     list<char> listObject;
     for (int i = 0; i < 10; i++) {
