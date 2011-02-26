@@ -1,5 +1,8 @@
-#include <iostream.h>
-#include <conio.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+
 int dol,cen;
 unsigned int cb=0,ch;
 void convert(int cb)
@@ -41,9 +44,9 @@ void read()
 		cout << "\n" <<"Enter a number to choose an option:\t";
 		cin >> ch;
 }
-void main()
+int main()
 {
-       clrscr();
+       system("cls");    //clrscr();
        cout <<"This program simulates a vending machine"<<endl;
        read();
        while (ch!=0)
@@ -109,4 +112,5 @@ void main()
 		read();
        }
        cout << "GoodBye\n";
+return 0;
 }
