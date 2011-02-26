@@ -42,6 +42,7 @@ struct node * buildOneTwoThree() {
 }
 
 int length(struct node* head) {
+    
     int count = 0;
     struct node* current = head;
     if (head == NULL) {
@@ -219,6 +220,61 @@ void insertSort(struct node* &head) {
         current = current->next;
     }
 }
+
+void appendList(struct node* &l1, struct node*&l2) {
+    if(l1 == NULL) {
+        l1 = l2;
+        l2 = NULL;
+    }
+    else {
+        struct node* current = l1;
+        while(current->next != NULL) {
+            current = current->next;
+        }
+        current->next = l2;
+        l2 = NULL;
+    }
+}
+
+void frontBackSplit(struct node *source, struct node* &front, struct node* &back) { 
+
+    if(source == NULL || source->next == NULL) {
+        front = source;
+        back = NULL;
+    } else {
+        struct node* fast = source;
+        struct node* slow = source;
+
+        while (fast != NULL) {
+            fast = fast->next;
+            if (fast != NULL) {
+                fast = fast->next;
+                slow = slow->next;
+            }
+
+        }
+        front = source;       
+        back = slow->next;
+    }
+}
+
+void removeAdjacentDuplicate(struct node* &head) {
+    struct node* current = head;
+    if(current == NULL) return;
+    else {
+        while(current->next != NULL) {
+            if(current->data == current->next->data) {
+                struct node* jump = current->next->next;
+                free(current->next);
+                current->next = jump;
+            }
+            else {
+                current = current->next;
+            }
+        }
+
+    }
+}
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
 /*===========================================================================*/
@@ -260,7 +316,6 @@ int main(int argc, char** argv) {
     printList(head);
 
     insertNTh(head, 0, 42);
-    insertNTh(head, 1, 13);
     insertNTh(head, 1, 5);
     insertNTh(head, 1, 71);
     printList(head);
@@ -282,7 +337,28 @@ int main(int argc, char** argv) {
     sortedInsert(head, newNode);
     printList(head);
 
+    cout <<"Append a second list to the first one"<<endl;
+    appendList(head, myList);
+    printList(head);
+    cout <<"Splitting the list in two"<<endl;
+    struct node* front = NULL;
+    struct node* back = NULL;
+    frontBackSplit(head, front, back);
+    printList(head);
+    printList(front);
+    printList(back);
+
+    pushAtHead(head, 1);
+    pushAtHead(head, 1);
+    pushAtHead(head, 2);
+    pushAtHead(head, 0);
+    pushAtHead(head, 2);
     
+    cout <<"removing duplicate"<<endl;
+    printList(head);
+    removeAdjacentDuplicate(head);
+    printList(head);
+
     cout<<" ===== Quick using of lists using STL ====="<<endl;
 
     list<char> listObject;
