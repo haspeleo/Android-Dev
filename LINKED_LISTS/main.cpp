@@ -287,7 +287,24 @@ void moveNode(struct node* & dest, struct node* &source) {
     
 }
 
-
+void alternatingSplit(struct node* source, struct node*& aRef, struct node*& bRef) {
+    struct node * a = NULL;
+    struct node * b = NULL;
+    
+    assert(source != NULL);
+    
+    struct node* current = source;
+    while(current != NULL) {
+        
+        moveNode(a, current);
+        
+        if (current != NULL) {
+            moveNode(b, current);
+        }
+    }
+    aRef = a;
+    bRef = b;
+}
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
 /*===========================================================================*/
@@ -363,7 +380,7 @@ int main(int argc, char** argv) {
 
     pushAtHead(head, 1);
     pushAtHead(head, 1);
-    pushAtHead(head, 2);
+    pushAtHead(head, 2);printList(head);
     pushAtHead(head, 0);
     pushAtHead(head, 2);
     
@@ -383,7 +400,21 @@ int main(int argc, char** argv) {
     moveNode(l1, l2);
     printList(l1);
     printList(l2);
+    printList(head);
 
+    cout<<"alternating split list in two smaller lists"<<endl;
+    struct node *a = NULL;
+    struct node *b = NULL;
+    deleteList(head);
+    for(int i = 0; i < 5; i++) {
+        pushAtEnd(head, i);
+    }
+    printList(head);
+    alternatingSplit(head, a, b);
+    printList(head);
+    printList(a);
+    printList(b);
+    
     cout<<" ===== Quick using of lists using STL ====="<<endl;
     list<char> listObject;
     for (int i = 0; i < 10; i++) {
