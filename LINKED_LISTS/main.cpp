@@ -305,6 +305,31 @@ void alternatingSplit(struct node* source, struct node*& aRef, struct node*& bRe
     aRef = a;
     bRef = b;
 }
+
+struct node* shuffleMerge(struct node*& aRef, struct node*& bRef) {
+    struct node* merged = NULL;
+    
+    struct node* currentA = aRef;
+    struct node* currentB = bRef;
+   
+    while (currentA != NULL || currentB != NULL) {
+        moveNode(merged, currentA);
+        if (currentB != NULL) {
+            moveNode(merged, currentB);
+        }
+    }
+    if(currentA == NULL) {
+        while(currentB != NULL) {
+            appendList(merged, currentB);
+        }
+    }
+    if(currentB == NULL) {
+        while(currentA != NULL) {
+            appendList(merged, currentA);
+        }
+    }    
+    return merged;
+}
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
 /*===========================================================================*/
@@ -406,7 +431,7 @@ int main(int argc, char** argv) {
     struct node *a = NULL;
     struct node *b = NULL;
     deleteList(head);
-    for(int i = 0; i < 5; i++) {
+    for(int i = 0; i < 10; i++) {
         pushAtEnd(head, i);
     }
     printList(head);
@@ -414,6 +439,10 @@ int main(int argc, char** argv) {
     printList(head);
     printList(a);
     printList(b);
+    cout <<"Shuffle merge of two lists"<<endl;
+
+    struct node * merged = shuffleMerge(a, b);
+    printList(merged);
     
     cout<<" ===== Quick using of lists using STL ====="<<endl;
     list<char> listObject;
