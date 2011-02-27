@@ -275,6 +275,19 @@ void removeAdjacentDuplicate(struct node* &head) {
 
     }
 }
+
+void moveNode(struct node* & dest, struct node* &source) {
+    struct node *currentS = source;
+    struct node *currentD = dest;    
+    
+    dest = currentS;
+    source = source->next;
+    currentS->next = currentD;
+    dest = currentS;
+    
+}
+
+
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
 /*===========================================================================*/
@@ -357,10 +370,21 @@ int main(int argc, char** argv) {
     cout <<"removing duplicate"<<endl;
     printList(head);
     removeAdjacentDuplicate(head);
-    printList(head);
+    printList(front);
+
+    cout <<"Moving node from front node from source to front in destination"<<endl;
+    struct node *l1 = NULL;
+    struct node *l2 = NULL;
+    
+    pushAtHead(l1, 2);pushAtHead(l1, 81);
+    pushAtHead(l2, 4);pushAtHead(l2, 71);
+    printList(l1);
+    printList(l2);
+    moveNode(l1, l2);
+    printList(l1);
+    printList(l2);
 
     cout<<" ===== Quick using of lists using STL ====="<<endl;
-
     list<char> listObject;
     for (int i = 0; i < 10; i++) {
         listObject.push_back('A'+i);
