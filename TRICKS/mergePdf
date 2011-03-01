@@ -1,0 +1,4 @@
+#gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=out.pdf in1.pdf in2.pdf ....
+
+pdftk 01-00Intro+15UnionFind.pdf  02-14AnalysisOfAlgorithms.pdf  03-13StacksAndQueues.pdf  04-21ElementarySorts.pdf  05-22Mergesort.pdf  06-23Quicksort.pdf  07-24PriorityQueues.pdf  08-31ST+32BST.pdf  09-33BalancedSearchTrees.pdf  10-34Hash+35Apps.pdf  12-41UndirectedGraphs.pdf  13-42DirectedGraphs.pdf  14-43MinimumSpanningTrees.pdf  15-44ShortestPaths.pdf  16-51StringSorts.pdf  17-52Tries.pdf  18-53SubstringSearch.pdf  19-54RegularExpressions.pdf  20-55DataCompression.pdf cat output combined.pdf 
+
