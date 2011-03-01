@@ -9,19 +9,74 @@
 
 #include <cstdlib>
 #include<iostream>
-#include"BinaryTree.h"
+#include<iostream>
 
 using namespace std;
 
+
+/*node structure */
+
+struct node {
+    int data;
+    struct node* left;
+    struct node* right;
+};
+
+
+
+/*Helper functions*/
+
+struct node * allocateNode(int data) {
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+    //struct node* newNode = new(struct(node); //allocate with new instead of sizeof
+    newNode->data = data;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    return newNode;
+}
+/*tree manipulating functions */
+
+void insertNode(struct node* node, int data) {
+
+    struct node* newNode = allocateNode(data);
+
+    if (node == NULL) {
+        node = allocateNode(data);
+    } else {
+
+        if (data < node->data)
+            insertNode(node->left, data);
+        else
+            insertNode(node->right, data);
+    }
+}
+
+
+int lookup(struct node* node, int target) { //could be written using while loop
+    if(node == NULL) return -1; //TO FIX
+    else {
+        struct node* current = node;
+        if(current->data == target) {
+            return current->data;
+        }
+        else {
+            if(current->data < target)
+                return (lookup(current->right, target));
+            else
+                return (lookup(current->left, target));
+        }
+    }
+}
+
+
+/*===========================================================================*/
+
 int main(int argc, char** argv) {
-    struct node* root;
-    BinaryTree T = BinaryTree(root);
-   
-    insertNode(T, 5);
+    struct node* tree = NULL;   
 
     cout <<"lookup is fast for Binay trees O(log(N)):  "<<endl;
     int data = 6;
-    int searchFor = T.lookup(T, data);
+    int searchFor = lookup(tree, data);
     if(searchFor !=  -1)
         cout <<"Found: "<<data<<"; Exists and the value is: "<<searchFor<<endl;
     else
