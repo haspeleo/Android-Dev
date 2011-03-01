@@ -15,14 +15,11 @@ using namespace std;
 
 
 /*node structure */
-
 struct node {
     int data;
     struct node* left;
     struct node* right;
 };
-
-
 
 /*Helper functions*/
 
@@ -36,21 +33,21 @@ struct node * allocateNode(int data) {
 }
 /*tree manipulating functions */
 
-void insertNode(struct node* node, int data) {
+struct node* insertNode(struct node*& node, int data) {
 
     struct node* newNode = allocateNode(data);
 
     if (node == NULL) {
-        node = allocateNode(data);
+        return newNode;
     } else {
 
         if (data < node->data)
-            insertNode(node->left, data);
+            node->left = insertNode(node->left, data);
         else
-            insertNode(node->right, data);
+            node->right = insertNode(node->right, data);
     }
+    return node;
 }
-
 
 int lookup(struct node* node, int target) { //could be written using while loop
     if(node == NULL) return -1; //TO FIX
@@ -68,14 +65,84 @@ int lookup(struct node* node, int target) { //could be written using while loop
     }
 }
 
+void printTree(struct node* node) {
+    if(node == NULL) {
+        return; //cout <<"Empty tree !!"<<endl;
+    }
+    else {
+        printTree(node->left);
+        cout <<node->data<<" ";
+        printTree(node->right);
+    }
+}
+void printTreePostOrder(struct node* node) {
+    if(node == NULL) {
+        return; //cout <<"Empty tree !!"<<endl;
+    }
+    else {
+        printTree(node->left);        
+        printTree(node->right);
+        cout <<node->data<<" ";
+    }    
+}
+void printTreePreOrder(struct node* node) {
+    if(node == NULL) {
+        return; //cout <<"Empty tree !!"<<endl;
+    }
+    else {
+        printTree(node->right);
+        printTree(node->left);
+        cout <<node->data<<" ";
+    }
+}
 
+
+int minValue(struct node* node) {
+    struct node* current = node;
+    while(current->left) {
+        current = current->left;
+    }
+    return current->data;
+}
+
+int maxValue(struct node* node) {
+    struct node* current = node;
+    while(current->right) {
+        current = current->right;
+    }
+    cout <<" - - - "<<endl;
+    return current->data;
+}
+
+int hasPathSum(struct node* node, int sum) {
+    int localSum = 0;
+
+    return localSum;
+}
+/*===========================================================================*/
+/*                                 MAIN PROGRAM                              */
 /*===========================================================================*/
 
 int main(int argc, char** argv) {
+    
     struct node* tree = NULL;   
+    tree = insertNode(tree, 5);
+    tree = insertNode(tree, 3);
+    tree = insertNode(tree, 9);
+    tree = insertNode(tree, 1);
+    tree = insertNode(tree, 4);
+    tree = insertNode(tree, 6);
+    
+    printTree(tree);
+    printTreePreOrder(tree);
+    printTreePostOrder(tree);
 
+    cout<<"Max value of the tree: "<<maxValue(tree)<<endl;
+
+    cout<<"Min value of the tree: "<<minValue(tree)<<endl;
+    
     cout <<"lookup is fast for Binay trees O(log(N)):  "<<endl;
-    int data = 6;
+    int data = 3;
     int searchFor = lookup(tree, data);
     if(searchFor !=  -1)
         cout <<"Found: "<<data<<"; Exists and the value is: "<<searchFor<<endl;
