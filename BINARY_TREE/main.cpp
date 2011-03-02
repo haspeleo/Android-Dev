@@ -98,7 +98,6 @@ void printTreePreOrder(struct node* node) {
     }
 }
 
-
 int minValue(struct node* node) {
     struct node* current = node;
     while(current->left) {
@@ -116,10 +115,31 @@ int maxValue(struct node* node) {
     return current->data;
 }
 
-int hasPathSum(struct node* node, int sum) {
-    int localSum = 0;
+bool hasPathSum(struct node* node, int sum) {
+    int subSum = 0;
+    if(node == NULL) {
+        return (sum == 0);
+    }
+    else {
+        struct node* current = node;
+        subSum = sum - current->data;
+        return (hasPathSum(current->left, subSum)
+                || hasPathSum(current->right, subSum));
+    }
+}
 
-    return localSum;
+void printPaths(struct node *node) {
+    if(node == NULL) cout<<"Empty tree!!"<<endl;
+    else {
+        struct node* current = node;
+        while(current->left != NULL || current->right != NULL) {
+            if (current->left == NULL)
+                printPaths(current->right);
+            else
+                printPaths(current->left);
+        }
+        cout <<current->data<<endl;
+    }
 }
 /*===========================================================================*/
 /*                                 MAIN PROGRAM                              */
@@ -139,17 +159,32 @@ int main(int argc, char** argv) {
     printTreePreOrder(tree);
     printTreePostOrder(tree);
 
-    cout<<"Max value of the tree: "<<maxValue(tree)<<endl;
+    cout<<">> Max value of the tree: "<<maxValue(tree)<<endl;
 
-    cout<<"Min value of the tree: "<<minValue(tree)<<endl;
+    cout<<">> Min value of the tree: "<<minValue(tree)<<endl;
     
-    cout <<"lookup is fast for Binay trees O(log(N)):  "<<endl;
+    cout <<">> lookup is fast for Binay trees O(log(N)):  "<<endl;
     int data = 3;
     int searchFor = lookup(tree, data);
+
     if(searchFor !=  -1)
         cout <<"Found: "<<data<<"; Exists and the value is: "<<searchFor<<endl;
     else
         cout <<"Not Found : "<<data<<"; does NOT exists "<<endl;
+
+    cout <<">> Looking for paths having sum nodes equal to given sum" <<endl;
+    int sum = 2;
+    if(hasPathSum(tree, sum)) {
+        cout <<"Path having node's sum = "<<sum<<" Exits"<<endl;
+    }
+    else {
+        cout <<"No Path having node's sum =  "<<sum<<endl;
+    }
+    
+    cout <<">> Printing all paths in a tree"<<endl;
+
+    printPaths(tree);
+
     return 0;
 }
 
