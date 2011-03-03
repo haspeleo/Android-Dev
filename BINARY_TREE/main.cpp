@@ -10,8 +10,8 @@
  */
 
 #include <cstdlib>
-#include<iostream>
-#include<iostream>
+#include <iostream>
+
 
 using namespace std;
 
@@ -128,19 +128,50 @@ bool hasPathSum(struct node* node, int sum) {
     }
 }
 
-void printPaths(struct node *node) {
-    if(node == NULL) cout<<"Empty tree!!"<<endl;
+/*helper functions for printing the tree paths*/
+void printArray(int ints[], int len) {
+    for(int i = 0; i < len; i++) {
+        cout <<ints[i]<<" ";
+    }
+    cout <<" "<<endl;
+}
+
+void printPathsRecursively(struct node* node, int path[], int pathLen) {
+    if(node == NULL) return;
+    //append this node to the path array
+    path[pathLen] = node->data;
+    pathLen ++;
+    if(node->left == NULL && node->right == NULL) {
+        printArray(path, pathLen);
+    }
     else {
-        struct node* current = node;
-        while(current->left != NULL || current->right != NULL) {
-            if (current->left == NULL)
-                printPaths(current->right);
-            else
-                printPaths(current->left);
-        }
-        cout <<current->data<<endl;
+        printPathsRecursively(node->left, path, pathLen);
+        printPathsRecursively(node->right, path, pathLen);
     }
 }
+void printTreePaths(struct node * node) {
+    int path[1000];
+    printPathsRecursively(node, path, 0);
+}
+
+void mirror(struct node* node) {
+    if (node == NULL) return;
+    else {
+        struct node * temp = NULL;
+
+        mirror(node->left);
+        mirror(node->right);
+
+        //swap(node->left, node->right);
+
+        temp = node->left;
+        node->left = node->right;
+        node->right = temp;
+    }
+
+}
+
+
 /*===========================================================================*/
 /*                                 MAIN PROGRAM                              */
 /*===========================================================================*/
@@ -153,7 +184,10 @@ int main(int argc, char** argv) {
     tree = insertNode(tree, 9);
     tree = insertNode(tree, 1);
     tree = insertNode(tree, 4);
-    tree = insertNode(tree, 6);
+    tree = insertNode(tree, 12);
+    tree = insertNode(tree, 8);
+    tree = insertNode(tree, 17);
+    tree = insertNode(tree, 2);
     
     printTree(tree);
     printTreePreOrder(tree);
@@ -183,8 +217,11 @@ int main(int argc, char** argv) {
     
     cout <<">> Printing all paths in a tree"<<endl;
 
-    printPaths(tree);
-
+    printTreePaths(tree);
+    cout <<"Mirror of a tree"<<endl;
+    printTreePaths(tree);
+    mirror(tree);
+    printTreePaths(tree);
     return 0;
 }
 
