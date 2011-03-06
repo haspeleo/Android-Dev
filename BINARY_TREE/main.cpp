@@ -170,7 +170,15 @@ void mirror(struct node* node) {
     }
 
 }
-
+bool sameTree(struct node * a, struct node * b) {
+    if (a == NULL && b == NULL) return true;    
+    else
+    if (a != NULL && b != NULL) {        
+     return (sameTree(a->left, b->left) 
+             && sameTree(a->right, b->right));
+    }
+    else return false;
+}
 
 /*===========================================================================*/
 /*                                 MAIN PROGRAM                              */
@@ -222,6 +230,16 @@ int main(int argc, char** argv) {
     printTreePaths(tree);
     mirror(tree);
     printTreePaths(tree);
+
+    cout <<"Checking if two trees are the same structurally :"<<endl;
+    struct node *tree2 = NULL;
+    tree2 = insertNode(tree2, 99);    
+    bool same = sameTree(tree, tree2);
+    
+    if(same)
+        cout <<"Same tree"<<endl;
+    else
+        cout <<"Trees are differents"<<endl;
     return 0;
 }
 
