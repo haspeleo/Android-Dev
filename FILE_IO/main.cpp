@@ -8,6 +8,8 @@
 
 #include <fstream>
 #include <iostream>
+#include <cstdlib>
+
 
 
 
@@ -26,7 +28,14 @@ void readFile(ifstream &file) {
 /**************************************************************************/
 int main(int argc, char** argv) {
 
-    fstream File("cpp-home.txt", ios::in | ios::out);
+    
+    
+    fstream File("cpp-home.txt", ios::in | ios::out);  
+    if(!File) {
+        cout << "Error opening the file! Aborting ..\n";
+        exit(1);
+    }
+
     File << "Hello wold, fstream !"; //put "Hi!" in the file
     static char str[10]; //when using static, the array is automatically
     //initialized, and very cell NULLed
