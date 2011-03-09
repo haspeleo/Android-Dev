@@ -345,6 +345,16 @@ struct node* predecessor(struct node* head, int x) {
     }
 }
 
+struct node * lookup(struct node * head, int searchFor) {
+    if(head == NULL) return NULL;
+    if(head->data == searchFor) {
+        return (head);
+    }
+    else {
+        return(lookup(head->next, searchFor));
+    }
+}
+
 //void deleteElement(struct node *& head, int item) {
 //    if(head == NULL) return;
 //    else {
@@ -422,6 +432,9 @@ int main(int argc, char** argv) {
         pushAtEnd(head, i * 2);
     }
     printList(head);
+    cout <<"Searching for one element: "<<endl;
+    //struct node* wanted = lookup(head, 4);
+    cout <<"Searching for 4 => "<<lookup(head, 4)->data<<endl;
     cout <<"given an element, insert it in a sorted list"<<endl;
     int value = 7;
     struct node* newNode = (struct node*)malloc(sizeof (struct node));
@@ -483,7 +496,7 @@ int main(int argc, char** argv) {
     cout <<"predecessor of an element:"<<endl;
     struct node *pred = predecessor(merged, 5);
     cout <<"Predeccessor is: "<<pred->data<<endl;
-    cout <<"Deleting one element"<<endl;
+    cout <<"Deleting one element 5 "<<endl;
     deleteElement(merged, 5);
     printList(merged);
 
