@@ -330,6 +330,43 @@ struct node* shuffleMerge(struct node*& aRef, struct node*& bRef) {
     }    
     return merged;
 }
+
+struct node* predecessor(struct node* head, int x) {
+    if(head == NULL || head->next == NULL) {
+        cout <<"Empty list"<<endl;
+        return NULL;
+    }
+    struct node *pred = head;    
+    if(pred->next->data == x) {
+        return pred;
+    }
+    else {
+        return(predecessor(pred->next, x));
+    }
+}
+
+//void deleteElement(struct node *& head, int item) {
+//    if(head == NULL) return;
+//    else {
+//        struct node * current = head;
+//        if(current->next->data != item) {
+//            current->next = current->next->next;
+//        }
+//        else {
+//            deleteElement(current->next, item);
+//        }
+//    }
+//}
+
+void deleteElement(struct node *& head, int item) {
+    struct node * searched = lookup(head, item);
+    struct node * pred = predecessor(head, item);
+
+    pred->next = searched->next;
+    free(searched);
+}
+
+
 /*===========================================================================*/
 /*                          MAIN PROGRAM                                     */
 /*===========================================================================*/
@@ -443,6 +480,13 @@ int main(int argc, char** argv) {
 
     struct node * merged = shuffleMerge(a, b);
     printList(merged);
+    cout <<"predecessor of an element:"<<endl;
+    struct node *pred = predecessor(merged, 5);
+    cout <<"Predeccessor is: "<<pred->data<<endl;
+    cout <<"Deleting one element"<<endl;
+    deleteElement(merged, 5);
+    printList(merged);
+
     
     cout<<" ===== Quick using of lists using STL ====="<<endl;
     list<char> listObject;
