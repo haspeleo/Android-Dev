@@ -15,6 +15,7 @@ using namespace std;
 
 int hash_folding(string word, int tableSize) {
 
+
     int sum = 0;
     for(int i = 0; i < word.length(); i++) {
         sum += word[i];
