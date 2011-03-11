@@ -19,6 +19,17 @@ int findmatching(string text, string pattern) {
 
 }
 
+void rabin_karp(string text, string pattern, int hash) {
+    
+}
+
+
+
+/*********************************************************************/
+/*             sub string pattern matching                           */
+/*********************************************************************/
+
+
 int main(){
     string text = "love you and only you";
     string pattern = "you";

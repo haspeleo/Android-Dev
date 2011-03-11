@@ -3,7 +3,7 @@
 #include<iostream>
 #include<ctime>
 #include<stdio.h>
-
+//see Cuda by examples book
 //#include"book.h"
 
 #define SIZE    (100*1024*1024)
@@ -94,7 +94,7 @@ void verify_table( const Table &table ) {
         Entry    *current = table.entries[i];
          while (current != NULL) {
              ++count;
-             if ( hash(current->value, table.count ) != i)
+             if ( hash(current->value, table.count) != i)
 
              cout<<current->value<<" hashed to"<<hash(current->value, table.count)<<", but was located at"<<i<<endl;
 
