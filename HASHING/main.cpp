@@ -5,6 +5,8 @@
  * Created on 11 mars 2011, 15:32
  * http://www.brpreiss.com/books/opus4/
  * http://www.mysqlperformanceblog.com/2006/06/09/why-mysql-could-be-slow-with-large-tables/
+ * http://users.cis.fiu.edu/~weiss/dsaa_c++/code/
+ * http://www.cs.princeton.edu/~rs/ //book algorithmes en C++ Robert Sedgewick
  */
 
 #include <cstdlib>
