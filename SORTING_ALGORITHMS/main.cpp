@@ -146,24 +146,6 @@ vector<int> mergeSort(vector<int>& vec) {
     return merge(left, right);
 }
 
-//void mergeSort(vector<int> &v) {
-//    int size = v.size();
-//    if (size > 1) {
-//        int left = size / 2;
-//        int right = size - left;
-//        vector<int> v1;
-//        vector<int> v2;
-//        copyVector(v, v1, 0, left);
-//        copyVector(v, v2, left, right);
-//
-//        mergeSort(v1);
-//        mergeSort(v2);
-//
-//       v = merge(v1, v2);
-//    }
-//}
-
-
 void selectionSort(vector<int> &v) {
     int iPos;
     int iMin;
