@@ -11,9 +11,6 @@
 #include <cstdlib>
 #include <cstring>
 
-
-
-
 using namespace std;
 void readFile(ifstream &file) {
     
@@ -23,14 +20,11 @@ void readFile(ifstream &file) {
         cout << ch;
     }   
 }
-
 /**************************************************************************/
 /*                 MAIN PROGRAM                                           */
 /**************************************************************************/
 int main(int argc, char** argv) {
-
-    
-    
+   
     fstream File("cpp-home.txt", ios::in | ios::out);  
     if(!File || File.fail()) { // you can use after File.is_open()
         cout << "File error ! Aborting ..\n";
