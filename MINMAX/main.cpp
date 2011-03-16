@@ -1,3 +1,9 @@
+
+/*
+ *http://www.sifflez.org/misc/tronbot/index.html //minmax for TRON BOT
+ *http://csclub.uwaterloo.ca/contest/off_the_ground.php#setup //google AI challenge
+ */
+
 #include<iostream>
 
 using namespace std;
