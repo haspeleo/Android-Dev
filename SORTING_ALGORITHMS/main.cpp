@@ -33,12 +33,14 @@ void insertElement(vector<int> &v, int element, int position) {
     }
     v = w;
 }
+
 void printVector(vector<int> &v) {
     for(int i = 0; i < v.size(); ++i) {
         cout <<v[i]<<" ";
     }
     cout <<" "<<endl;
 }
+
 void fillVectorRandomly(vector<int> &v) {
     srand((unsigned)time(0));
     int randomNumber;
@@ -47,6 +49,7 @@ void fillVectorRandomly(vector<int> &v) {
         v.push_back(randomNumber);
     }
 }
+
 void copyVector(vector<int>&source, vector<int>&destination, int start, int end) {
    
     for(int i = start; i < end; i++) {
@@ -159,8 +162,6 @@ void selectionSort(vector<int> &v) {
             swap(v[iPos], v[iMin]);
     }
 }
-
-
 
 void quickSort(vector<int>&v, int start, int stop) {
     if (stop > start) {

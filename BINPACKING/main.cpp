@@ -67,9 +67,6 @@ int partition(vector<int>&v, int p, int r) {
 
     void permutate() {
 
-   
-
-
 
     string myints[] = {"E5", "E3", "F3", "F3", "D2",
         "C3", "E1", "C3", "D1", "E2"};
