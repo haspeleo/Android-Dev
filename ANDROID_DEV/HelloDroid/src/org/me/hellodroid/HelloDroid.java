@@ -1,6 +1,8 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * add nbandroid plugin to netbeans
+ * http://www.javamidlet.com/2009/01/27/using-netbeans-for-android-development.html
+ * add git plugin
+ * http://code.google.com/p/nbgit/wiki/Install
  */
 
 package org.me.hellodroid;
