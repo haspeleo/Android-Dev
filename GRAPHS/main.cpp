@@ -6,25 +6,26 @@
  */
 
 #include <cstdlib>
+#include <iostream>
 
 #define MAXV 1000
 
 using namespace std;
 
-typedef struct{
+typedef struct edgenode {
     int y;
     int weight;
     struct edgenode *next;
-} edgenode;
+};
 
 
-typedef struct {
+typedef struct graph {
   edgenode *edges[MAXV + 1];
   int degree[MAXV + 1];
   int nvertices;
   int nedges;
   bool directed;
-} graph;
+};
 
 void initializeGraph(graph *g, bool directed) {
     g->nvertices = 0;
@@ -40,6 +41,23 @@ void initializeGraph(graph *g, bool directed) {
     }
 }
 
+void insertEdge(graph *g, int x, int y, bool directed) {
+
+    struct edgenode *p = (struct edgenode*)malloc(sizeof(struct edgenode));
+    //struct node *newNode = (struct node*)malloc(sizeof(struct node));
+
+    p->y = y;
+    p->weight = NULL;
+    p->next = g->edges[x];
+
+    g->edges[x] = p;
+    g->degree[x] ++;
+
+    if(directed == false)
+        insertEdge(g, x, y, true);
+    else
+        g->nedges ++;
+}
 
 
 
@@ -56,22 +74,6 @@ void readGraph(graph *g, bool directed) {
     }
 }
 
-void insertEdge(graph *g, int x, int y, bool directed) {
-    
-    edgenode *p;
-    p = malloc(sizeof(struct edgenode));
-    p->y = y;
-    p->weight = NULL;
-    p->next = g->degree[x];
-
-    g->edges[x] = p;
-    g->degree[x] ++;
-
-    if(directed == false)
-        insertEdge(g, x, y, true);
-    else
-        g->nedges ++;
-}
 
 void printGraph(graph *g) {
 
