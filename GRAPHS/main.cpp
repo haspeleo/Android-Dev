@@ -1,8 +1,6 @@
-/* 
- * File:   main.cpp
- * Author: doghmen
+/* The Algorithm design manual p.153
  *
- * Created on 30 mars 2011, 09:24
+ * http://www.cppreference.com/wiki/algorithm/start --algorithms defined in <algorithm>
  */
 
 #include <cstdlib>
@@ -12,14 +10,13 @@
 
 using namespace std;
 
-typedef struct edgenode {
+struct edgenode {
     int y;
     int weight;
     struct edgenode *next;
 };
 
-
-typedef struct graph {
+struct graph {
   edgenode *edges[MAXV + 1];
   int degree[MAXV + 1];
   int nvertices;
@@ -32,20 +29,19 @@ void initializeGraph(graph *g, bool directed) {
     g->nedges = 0;
     g->directed = directed;
 
-    for(int i = 1; i < MAXV; i++) {
+    for(int i = 1; i <= MAXV; i++) {
         g->degree[i] = 0;
     }
 
-    for(int i = 1; i < MAXV; i++) {
+    for(int i = 1; i <= MAXV; i++) {
         g->edges[i] = NULL;
     }
 }
 
 void insertEdge(graph *g, int x, int y, bool directed) {
 
-    struct edgenode *p = (struct edgenode*)malloc(sizeof(struct edgenode));
-    //struct node *newNode = (struct node*)malloc(sizeof(struct node));
-
+    struct edgenode *p = NULL;
+    p = (struct edgenode*)malloc(sizeof(struct edgenode));
     p->y = y;
     p->weight = NULL;
     p->next = g->edges[x];
@@ -59,17 +55,18 @@ void insertEdge(graph *g, int x, int y, bool directed) {
         g->nedges ++;
 }
 
-
-
 void readGraph(graph *g, bool directed) {
     int m;
     int x, y;
 
     initializeGraph(g, directed);
+    scanf("%d %d", &(g->nvertices), &m);
+//    cin >> g->nvertices;
+  //  cin >> m;
+    for(int i = 1; i <= m; i++) {
+    //    cin >> x >> y;
+	scanf("%d %d", &x, &y);
 
-    cin >> g->nvertices >> m;
-    for(int i = 0; i <  m; i++) {
-        cin >> x >> y;
         insertEdge(g, x, y, directed);
     }
 }
@@ -78,20 +75,29 @@ void readGraph(graph *g, bool directed) {
 void printGraph(graph *g) {
 
     edgenode *p;
-    for(int i = 0; i < g->nvertices; i++) {
-        cout <<i<<": "<<endl;
+    for(int i = 1; i <= g->nvertices; i++) {
+	printf("%d : ", i);
+	//cout <<i<<": "<<endl;
         p = g->edges[i];
 
         while(!p) {
-            cout <<p->y<<endl;
+           // cout <<p->y<<endl;
+	    printf("p->y: ", p->y);
             p = p->next;
         }
-        cout <<" "<<endl;
+        printf("\n"); //cout <<" "<<endl;
     }
 }
 
 int main(int argc, char** argv) {
 
+    graph *g = NULL;
+    insertEdge(g, 1, 2, false);
+    insertEdge(g, 2, 3, false);
+    insertEdge(g, 2, 3, false);
+
+    readGraph(g, false);
+    printGraph(g);
     return 0;
 }
 

@@ -43,8 +43,8 @@ void rabin_karp(string text, string pattern, int hash) {
 int main(){
 
     vector<int> positions;
-    string text = "youyouyou";
-    string pattern = "you";
+    string text = "yeyvey";
+    string pattern = "y";
     cout <<"TEXT: "<<text<<endl;
     cout <<"Fetching for pattern <"<<pattern<<">"<<endl;
 
