@@ -1,4 +1,6 @@
-
+/*
+ *  http://library.thinkquest.org/C005618/text/binarytrees.htm
+ */
 #include <cstdlib>
 #include <iostream>
 
