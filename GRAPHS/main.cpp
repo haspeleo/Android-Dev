@@ -12,14 +12,14 @@
 
 using namespace std;
 
-typedef struct edgenode {
+struct edgenode {
     int y;
     int weight;
     struct edgenode *next;
 };
 
 
-typedef struct graph {
+struct graph {
   edgenode *edges[MAXV + 1];
   int degree[MAXV + 1];
   int nvertices;
