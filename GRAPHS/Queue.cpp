@@ -3,6 +3,7 @@
  * Author: doghmen
  * 
  * Created on 30 mars 2011, 23:53
+ * http://xoax.net/comp/cpp/console/index.php //C++ tutorials
  */
 
 #include "Queue.h"
