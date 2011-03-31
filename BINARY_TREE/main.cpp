@@ -71,15 +71,17 @@ int main(int argc, char** argv) {
     tree.mirror(root);
     tree.printTreePaths(root);
 
-//    cout << "Checking if two trees are the same structurally :" << endl;
-//    struct node *tree2 = NULL;
-//    tree2 = tree.insertNode(tree2, 99);
-//    bool same = tree.sameTree(root, tree2);
-//
-//    if (same)
-//        cout << "Same tree" << endl;
-//    else
-//        cout << "Trees are differents" << endl;
+    cout << "Checking if two trees are the same structurally :" << endl;
+    struct node *root2 = NULL;
+    BinaryTree tree2(root2);
+    tree2.insertNode(root2, 99);
+
+    bool same = tree.sameTree(root, root2);
+
+    if (same)
+        cout << "Same tree" << endl;
+    else
+        cout << "Trees are differents" << endl;
     return 0;
 }
 
