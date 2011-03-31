@@ -1,9 +1,11 @@
 /* 
  * File:   Graph.cpp
  * Author: doghmen
- * 
+ *
+ * http://www.codersource.net/c/c-miscellaneous/breadth-first-search-in-c.aspx
  * Created on 30 mars 2011, 23:45
  */
+
 
 #include "Graph.h"
 #include "Queue.h"
