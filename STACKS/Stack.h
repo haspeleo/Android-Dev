@@ -15,7 +15,6 @@ struct StackNode {
 };
 
 
-
 template <class ItemType>
 class Stack {
 
@@ -31,10 +30,9 @@ public:
     bool isFull() const;
     int count() const;
 
-
 private:
 
-    StackNode<ItemType> *top;
+    StackNode<ItemType> *head;
     int counter;
 };
 
