@@ -6,68 +6,81 @@
  * http://library.thinkquest.org/C005618/text/binarytrees.htm# --Stack LIFO 
  */
 #include <cstdlib>
+#include <cstdlib>
 #include "Stack.h"
 
 #define MAX_SIZE 1000
 
-template <class ItemType>
+template <typename ItemType>
 Stack<ItemType>::Stack() {
     counter = 0;
     head = NULL;
 }
 
-
-template <class ItemType>
+template <typename ItemType>
 Stack<ItemType>::Stack(const Stack& orig) {
 }
 
-template <class ItemType>
+template <typename ItemType>
 Stack<ItemType>::~Stack() {
-    delete head;
-    counter = 0;
+    clear();
+    //delete head;
+    //counter = 0;
 }
 
-template <class ItemType>
-ItemType Stack<ItemType>::pop(){
-	return head;
-}
-
-template <class ItemType>
+template <typename ItemType>
 void Stack<ItemType>::push(const ItemType element){
+    assert(!isFull()); //abort if not enough memory to create new node
+
     StackNode<ItemType> s;
-    head = s;
     s->data = element;
-    s->next = NULL;
+    s->next =  head;
+    head = s;
     counter ++;
 }
-
-template <class ItemType>
-ItemType Stack<ItemType>::top() const {
-	return head;
+template <typename ItemType>
+ItemType Stack<ItemType>::pop(){
+    assert(!isFull());
+    ItemType item = head->data;
+    StackNode<ItemType> s = head;
+    head = head->next;
+    delete s;
+    counter --;
+    return head->data;
 }
 
-template <class ItemType>
+
+template <typename ItemType>
+ItemType Stack<ItemType>::top() const {
+    	assert(!isEmpty());
+	return head->data;
+}
+
+template <typename ItemType>
 void Stack<ItemType>::clear(){
-//    while(!head->isEmpty()) {
-//	pop(head);
-//    }
-//	delete head;
-//	counter = 0;
+    StackNode<ItemType> *tmp;
+    while(head != NULL) {
+	tmp = head;
+	head = head->next;
+	delete tmp;
+    }
 }
  
-template <class ItemType>
+template <typename ItemType>
 bool Stack<ItemType>::isEmpty() const {
-    return (counter == 0);
-
+    return (top == NULL);
 }
 
-template <class ItemType>
+template <typename ItemType>
 bool Stack<ItemType>::isFull() const {
-    return (counter == MAX_SIZE);
-
+	StackNode<ItemType> *tmp = new StackNode<ItemType>;
+	if(tmp == NULL)
+	    return true;
+	else
+	    return false;
 }
 
-template <class ItemType>
+template <typename ItemType>
 int Stack<ItemType>::count() const {
 	return counter;
  }
