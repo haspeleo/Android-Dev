@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include "Stack.h"
 
+template <class ItemType>
 Stack<ItemType>::Stack() {
     counter = 0;
     head = NULL;
@@ -28,7 +29,7 @@ ItemType Stack<ItemType>::pop(){
 }
 
 template <class ItemType>
-Stack<ItemType>::push(const ItemType){
+void Stack<ItemType>::push(const ItemType){
 
 }
 
@@ -38,7 +39,7 @@ ItemType Stack<ItemType>::top() const {
 }
 
 template <class ItemType>
-Stack<ItemType>::clear(){
+void Stack<ItemType>::clear(){
 
 }
  

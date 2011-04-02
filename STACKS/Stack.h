@@ -14,7 +14,6 @@ struct StackNode {
     StackNode<ItemType> *next;
 };
 
-
 template <class ItemType>
 class Stack {
 
