@@ -1,4 +1,4 @@
-/*  nvcc -o vectorSum gpuVectorSum.cu  */
+/* compile :  nvcc -o vectorSum gpuVectorSum.cu  */
 
 #include <stdio.h>
 
