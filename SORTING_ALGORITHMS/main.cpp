@@ -17,6 +17,9 @@
 #include<iterator>
 #include<functional>
 
+#include "Timer.h"
+
+
 using namespace std;
 
 
@@ -191,6 +194,8 @@ int main(int argc, char** argv) {
 
     vector<int> v;
     //fillVectorRandomly(v);
+    Timer timer;
+    timer.begin();
 
     v.push_back(5);
     v.push_back(7);
@@ -200,6 +205,11 @@ int main(int argc, char** argv) {
     v.push_back(2);
     v.push_back(1);
     v.push_back(6);
+    
+    double time = timer.end(); 
+
+
+    cout <<">>>time used : "<<time<<endl;
     
     cout <<"********the unsorted vector********"<<endl;
     printVector(v);
