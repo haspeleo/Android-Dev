@@ -192,47 +192,49 @@ void bubbleSort(vector<int>&v) {
 //////////////////////////////////////////////////////////////////
 int main(int argc, char** argv) {
 
+    srand(time(NULL));
+    int DATA_SIZE = atoi(argv[1]);
+
     vector<int> v;
-    //fillVectorRandomly(v);
+    int random_data;
+    //fill the vector randomly
+    for (int i = 0; i < DATA_SIZE; i++) {
+	random_data = rand() % DATA_SIZE + 1;
+	v.push_back(random_data);
+    }
+
+    cout <<"********Sorting with QuickSort  Algorithm********"<<endl;
     Timer timer;
     timer.begin();
 
-    v.push_back(5);
-    v.push_back(7);
-    v.push_back(0);
-    v.push_back(3);
-    v.push_back(4);
-    v.push_back(2);
-    v.push_back(1);
-    v.push_back(6);
-    
-    double time = timer.end(); 
-
-
-    cout <<">>>time used : "<<time<<endl;
-    
-    cout <<"********the unsorted vector********"<<endl;
-    printVector(v);
-
-//    cout <<"********Sorting with Selection sort Algorithm********"<<endl;
-//    selectionSort(v);
-//    printVector(v);
-    
-//    cout <<"********Sorting with Insertion sort Algorithm********"<<endl;
-//    insertionSort(v);
-//    printVector(v);
-//    cout <<"********Sorting with Merge sort Algorithm********"<<endl;
-//    vector<int> w = mergeSort(v);
-//    printVector(w);
-
-    cout <<"********Sorting with QuickSort  Algorithm********"<<endl;
     quickSort(v, 0, v.size() - 1);
-    printVector(v);
 
-//    cout <<"********Sorting with Bubble Sort Algorithm********"<<endl;
-//    bubbleSort(v);
-//    printVector(v);
+    double time = timer.end();
+    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
+    
+    cout <<"********Sorting with Selection sort Algorithm********"<<endl;
+    timer.begin();
+    selectionSort(v);
+    time = timer.end();
+    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
+    
+    cout <<"********Sorting with Insertion sort Algorithm********"<<endl;
+    timer.begin();
+    insertionSort(v);
+    time = timer.end();
+    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
 
+    cout <<"********Sorting with Merge sort Algorithm********"<<endl;
+    timer.begin();
+    vector<int> w = mergeSort(v);
+    time = timer.end();
+    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
+
+    cout <<"********Sorting with Bubble Sort Algorithm********"<<endl;
+    timer.begin();
+    bubbleSort(v);
+    time = timer.end();
+    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
 
     cout <<"\n\n"<<endl;
     return 0;

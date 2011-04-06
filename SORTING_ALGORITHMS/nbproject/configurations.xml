@@ -39,6 +39,9 @@
         <platform>2</platform>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandlineTool>g++</commandlineTool>
+        </ccTool>
       </compileType>
     </conf>
     <conf name="Release" type="1">
