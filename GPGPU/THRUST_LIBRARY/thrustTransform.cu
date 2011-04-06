@@ -8,12 +8,13 @@
 #include <thrust/fill.h>
 #include <thrust/replace.h>
 
-#include <thrust/functional.h>
+#include <thrust/functional.h> //for using functors
 
 #include "utils.h"
 #include <algorithm>
 
-int op_negate(int i) {return -1 * i;}
+//int op_negate(int i) {return -1 * i;}
+//int op_modulos(int a, int b ) {return a % b;}
 
 int main () {
 
@@ -28,16 +29,25 @@ int main () {
 	thrust::sequence (X.begin(), X.end());
 	printDeviceVector(X, "X");
     // compute Y = -X
-	std::transform(X.begin(), X.end(), Y.begin(), op_negate);
-	
+	//for(int i = 0 ; i < X.size(); i++) {
+	//	Y[i] = -1 * X[i];
+	//}
+	 printDeviceVector(X, "X");
+	 printDeviceVector(Y, "Y");
+	thrust::transform(X.begin(), X.end(), Y.begin(), thrust::negate<int>());
+	std::cout <<">>>> after transform : transform(X.begin(), X.end(), Y.begin(), thrust::negate<int>()) "<<std::endl;	
 	printDeviceVector(X, "X");
+	printDeviceVector(Y, "Y");
     // fill Z with twos
-
+	thrust::fill(Z.begin(), Z.end(), 2);
+	
+	printDeviceVector(Z, "Z");
     // compute Y = X mod 2
+	thrust::transform(X.begin(), X.end(), Z.begin(), Y.begin(), thrust::modulus<int>());
 
     // replace all the ones in Y with tens
-
+ 	thrust::replace(Y.begin(), Y.end(), 1, 10);
     // print Y
-	
+	thrust::copy(Y.begin(), Y.end(), std::ostream_iterator<int>(std::cout, "\n"));
 return 0;
 }

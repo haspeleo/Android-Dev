@@ -9,15 +9,17 @@
 
 //printing device vector
 void printDeviceVector(thrust::device_vector<int> v, std::string name) {
+	std::cout<<name<<"["<<" ";
 	for(int i = 0; i < v.size(); i++) {
-        	 std::cout <<name<<"["<<i<<"] = "<<v[i]<< std::endl;
+        	 std::cout <<v[i]<< " ";
 	}
-	std::cout <<"  "<<std::endl;
+	std::cout<<"]"<<std::endl;
 }
 //printing host vector	
 void printHostVector(thrust::host_vector<int> v, std::string name) {
+	std::cout<<name<<"["<<" ";
 	for(int i = 0; i < v.size(); i++) {
-        	 std::cout <<name<<"["<<i<<"] = "<<v[i]<< std::endl;
+        	 std::cout <<v[i]<< " ";
 	}
-	std::cout <<"  "<<std::endl;
+	std::cout<<"]"<<std::endl;
 }
