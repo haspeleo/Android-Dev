@@ -44,11 +44,31 @@ void printVector(vector<int> &v) {
     cout <<" "<<endl;
 }
 
-void fillVectorRandomly(vector<int> &v) {
+
+void fillVectorSemiRandomly(vector<int> &v, int dataSize) {
+
+    int middle = (dataSize % 2 == 0) ? dataSize / 2 : dataSize / 2 + 1 ;
     srand((unsigned)time(0));
     int randomNumber;
-    for(int i = 0; i < 10; i++) {
-        randomNumber = rand() % 100;
+    for(int i = 0; i < middle; i++) {
+        v.push_back(i);
+    }
+    for(int i = middle + 1 ; i < dataSize ; i++) {
+        randomNumber = rand() % dataSize + 1;
+        v.push_back(randomNumber);
+    }
+
+}
+void fillVectorSorted(vector<int> &v, int dataSize) {
+    for(int i = 0; i < dataSize; i++) {
+        v.push_back(i);
+    }
+}
+void fillVectorRandomly(vector<int> &v, int dataSize) {
+    srand((unsigned)time(0));
+    int randomNumber;
+    for(int i = 0; i < dataSize; i++) {
+        randomNumber = rand() % dataSize + 1;
         v.push_back(randomNumber);
     }
 }
@@ -197,11 +217,11 @@ int main(int argc, char** argv) {
 
     vector<int> v;
     int random_data;
-    //fill the vector randomly
-    for (int i = 0; i < DATA_SIZE; i++) {
-	random_data = rand() % DATA_SIZE + 1;
-	v.push_back(random_data);
-    }
+
+	//fillVectorRandomly(v, DATA_SIZE);
+	fillVectorSorted(v, DATA_SIZE);
+	//fillVectorSemiRandomly(v, DATA_SIZE);
+	printVector(v);
 
     cout <<"********Sorting with QuickSort  Algorithm********"<<endl;
     Timer timer;
@@ -210,31 +230,39 @@ int main(int argc, char** argv) {
     quickSort(v, 0, v.size() - 1);
 
     double time = timer.end();
-    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
-    
+    printf("ELAPSED TIME for sorting = %.6f seconds...", time);
+
     cout <<"********Sorting with Selection sort Algorithm********"<<endl;
     timer.begin();
+
     selectionSort(v);
+
     time = timer.end();
-    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
-    
+    printf("ELAPSED TIME for sorting = %.6f seconds...", time);
+
     cout <<"********Sorting with Insertion sort Algorithm********"<<endl;
     timer.begin();
+
     insertionSort(v);
+
     time = timer.end();
-    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
+    printf("ELAPSED TIME for sorting = %.6f seconds...", time);
 
     cout <<"********Sorting with Merge sort Algorithm********"<<endl;
     timer.begin();
+
     vector<int> w = mergeSort(v);
+
     time = timer.end();
-    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
+    printf("ELAPSED TIME for sorting = %.6f seconds...", time);
 
     cout <<"********Sorting with Bubble Sort Algorithm********"<<endl;
     timer.begin();
+
     bubbleSort(v);
+
     time = timer.end();
-    printf("ELAPSED TIME for sorting = %.6f\n seconds...", time);
+    printf("ELAPSED TIME for sorting = %.6f seconds...", time);
 
     cout <<"\n\n"<<endl;
     return 0;
