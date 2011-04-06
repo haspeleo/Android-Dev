@@ -111,3 +111,79 @@ int main() {
 
 
 
+
+
+
+////////////////////////////////////////////////////::
+//#include <iostream.h>
+//#include <conio.h>
+//#include <stdio.h>
+//#include <string.h>
+//using namespace std;
+//
+//class Permutation
+//{
+//  private:
+//    static char s[20];
+//    int width,l;
+//  public:
+//    void input();
+//    void compute();
+//    void recur(char choice[],char final[],int);
+//};
+//char Permutation::s[20];
+//
+//void Permutation::input()
+//{
+//  cout<<"Enter the string:";
+//  gets(s);
+//  cout<<"Places to arrange:";
+//  cin>>width;
+//};
+//
+//void Permutation::compute()
+//{
+//  l=strlen(s);
+//  char s1[20];
+//  recur(s,s1,0);
+//}
+//
+//void Permutation::recur(char choice[],char final[],int p)
+//{
+//   int i,j,chk,c=0;
+//   if(p==width){//base condition
+//     cout<<"OUT: "<<final;
+//	 cout<<endl;
+//	 return;
+//   }
+//   //setting choice variables
+//   for(i=0;i<l;i++){
+//   	   chk=0;
+//       for(j=0;j<strlen(final);j++){
+//
+//	     	 if(s[i]==final[j])
+//		       chk=1;
+//       }
+//	   if(chk==0){choice[c++]=s[i];}
+//   }
+//   choice[c]='\0';
+//
+//  //traversing recursion
+//  for(i=0;i<c-1;i++){
+//
+//	final[p]=choice[i];
+//	final[p+1]='\0';cout<<"Beforein:\t "<<choice<<" -\t "<<final<<" -\t "<<p+1<<" -\t"<<i+1<<" "<<c<<endl<<endl;
+//	recur(choice,final,p+1);
+//
+//	cout<<"Returned: \t"<<choice<<" - \t"<<final<<" - \t"<<p+1<<"-\t"<<i+1<<" "<<c<<endl<<endl;
+//  }
+//}
+//
+//int main()
+//{
+//   Permutation arrange;
+//   arrange.input();
+//   arrange.compute();
+//   getch();
+//   return 0;
+//}
