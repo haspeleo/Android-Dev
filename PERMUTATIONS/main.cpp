@@ -95,12 +95,6 @@ int main() {
     v.push_back("C");
     v.push_back("D");
     v.push_back("E");
-    v.push_back("E");
-    v.push_back("F");
-    v.push_back("G");
-    v.push_back("H");
-    v.push_back("I");
-    v.push_back("J");
 
     vector_permutation(v, w, display<string>);
 
