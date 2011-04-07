@@ -5,7 +5,7 @@
  * Created on 31 mars 2011, 16:55
  * http://library.thinkquest.org/C005618/text/binarytrees.htm# --Stack LIFO 
  */
-#include <cstdlib>
+
 #include <cstdlib>
 #include "Stack.h"
 
