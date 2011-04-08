@@ -12,6 +12,10 @@
  * your own assert() macro.
  * Listing below provides a simple assert() macro and shows its use.
  *
+ * Common Error:
+ * Animal *pCat = new Cat;
+ * Assert(pCat);   // bad use of assert
+ * pCat->SomeFunction();
  */
 
 #include <cstdlib>
@@ -20,11 +24,28 @@
 using namespace std;
 
 //ASSERTS
-#define DEBUG
+#define DEBUG  //done at compile time
 
-
+#ifndef DEBUG
+	#define ASSERT(X)
+#else
+	#define ASSERT(X) \
+		if(!(X)) { \
+		cout <<"Error!! Assert "<<#X<<" failed"<<endl; \
+		cout <<"on line "<<__LINE__<<endl; \
+		cout <<"on file "<<__FILE__<<endl; \
+		}
+#endif
 
 int main(int argc, char** argv) {
+
+    int x = 5;
+    x = 0;
+    cout <<"First assert : "<<endl;
+    ASSERT(x);
+    cout <<"Second assert: "<<endl;
+    ASSERT(x != 5);
+    cout <<"done"<<endl;
 
     return 0;
 }
