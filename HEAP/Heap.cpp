@@ -55,7 +55,16 @@ void Heap<ItemType>::insert(const ItemType& item) {
 
 template<typename ItemType>
 ItemType Heap<ItemType>::removeMax() {
+    if(isEmpty())
+	throw std::exception("Heap is empty!");
+    else {
+	nbElements --;
 
+	if(nbElements != 0) {
+	    swap(array[0], array[nbElements]);
+	    reHeap(0);
+	}
+    }
 }
 
 template<typename ItemType>
