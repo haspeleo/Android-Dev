@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=graphs
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/graphs
+CND_ARTIFACT_NAME_Debug=graphs_stanford
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/graphs_stanford
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=graphs.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/graphs.tar
+CND_PACKAGE_NAME_Debug=graphsstanford.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/graphsstanford.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=graphs
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/graphs
+CND_ARTIFACT_NAME_Release=graphs_stanford
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/graphs_stanford
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=graphs.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/graphs.tar
+CND_PACKAGE_NAME_Release=graphsstanford.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/graphsstanford.tar
 #
 # include compiler specific variables
 #
