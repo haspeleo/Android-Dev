@@ -17,7 +17,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-	Stack<int> stack;
+//	Stack<int> stack;
 //
 //	if(stack.isEmpty())
 //	    cout <<"Empty Stack!"<<endl;
