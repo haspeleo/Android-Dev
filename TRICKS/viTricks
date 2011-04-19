@@ -1,5 +1,7 @@
 #export a path
+http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/
 export PATH=/home/user/mes_prog/:$PATH
+
 
 
 :%s/^M//g : delete embarrassing ^M  you must hold CTRL-V-M together
