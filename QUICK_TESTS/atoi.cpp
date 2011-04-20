@@ -1,4 +1,9 @@
 
+/*
+ * http://www.site.uottawa.ca/~lucia/courses/2131-05/labs/Lab3/CommandLineArguments.html
+ */
+
+
 #include <iostream>
 #include <cstdlib>
 
