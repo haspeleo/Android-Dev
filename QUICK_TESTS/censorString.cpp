@@ -1,3 +1,8 @@
+
+
+/*
+ *http://technical-interview.com/C_Questions_1.aspx
+ * */
 #include <iostream>
 #include <string>
 
