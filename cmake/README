@@ -1,0 +1,5 @@
+quick overview to CMake:
+http://www.cs.swarthmore.edu/~adanner/tips/cmake.php
+
+For help on using make and Makefiles without CMake, please see:
+http://web.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html
