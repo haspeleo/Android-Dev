@@ -1,0 +1,7 @@
+
+for running the java applet you have to 
+write a simple pnz.html
+an specifies the .class here :    <applet code="PNZ.class" height=200 width=320> 
+
+
+http://www.cs.colostate.edu/helpdocs/JavaInDOS.html#APPLICATIONS

@@ -4,3 +4,8 @@ gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=out.pd
 #of with pdftk
 pdftk in1.pdf in2.pdf cat output combined.pdf 
 
+to convert from epub to pdf
+http://epub2pdf.com/
+chmod +x ./epub2pdf.sh 
+./epub2pdf.sh <path-to-epub-file>
+
