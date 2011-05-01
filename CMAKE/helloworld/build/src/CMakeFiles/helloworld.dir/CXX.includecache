@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/users/tao/doghmen/interviewing/CMAKE/helloworld/src/helloworld.cpp
+iostream
+-
+helloworld.h
+/users/tao/doghmen/interviewing/CMAKE/helloworld/src/helloworld.h
+
+/users/tao/doghmen/interviewing/CMAKE/helloworld/src/helloworld.h
+
+/users/tao/doghmen/interviewing/CMAKE/helloworld/src/main.cpp
+helloworld.h
+/users/tao/doghmen/interviewing/CMAKE/helloworld/src/helloworld.h
+
