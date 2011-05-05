@@ -1,0 +1,1 @@
+ latex poster.tex && dvips poster.dvi && ps2pdf poster.ps 
