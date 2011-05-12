@@ -1,26 +1,16 @@
-<<<<<<< HEAD:MCTS/poster/poster.log
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.5.7)  12 MAY 2011 17:51
-=======
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2008.12.28)  12 MAY 2011 17:14
->>>>>>> 5cb26c33e6842999a2cff6f28ce41a0331f77ba4:MCTS/poster/poster.log
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.5.7)  12 MAY 2011 22:25
 entering extended mode
  %&-line parsing enabled.
 **poster.tex
 (./poster.tex
 LaTeX2e <2005/12/01>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
-abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
-h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
-greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
-tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
-omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
-sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
 (./a0poster.cls
 Document Class: a0poster 2004/01/31 v1.22b a0poster class (GK, MW)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/base/article.cls
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
-(/usr/local/texlive/2008/texmf-dist/tex/latex/base/size10.clo
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
 File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -44,7 +34,7 @@ File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 \openout3 = `a0header.ps'.
 
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/a0poster/a0size.sty
+(/usr/share/texmf-texlive/tex/latex/a0poster/a0size.sty
 File: a0size.sty 2004/01/31 v1.22b a0poster class (GK, MW)
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 229.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
@@ -53,28 +43,28 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 229.
 \big@size=\dimen104
 ))
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2008/texmf/tex/latex/config/graphics.cfg
+(/etc/texmf/tex/latex/config/graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: dvips.def on input line 90.
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/dvips.def
+(/usr/share/texmf-texlive/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen105
@@ -83,7 +73,7 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \epsfxsize=\dimen107
 \epsfysize=\dimen108
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/multicol.sty
+(/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
 Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
 \c@tracingmulticols=\count91
 \mult@box=\box26
@@ -130,11 +120,11 @@ Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/pstricks/pstricks.sty
-Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
+(/usr/share/texmf-texlive/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2006/08/10 v0.32 LaTeX wrapper for `PSTricks' (RN,HV)
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pstricks.tex
-`PSTricks' v1.27  <2009/01/25> (tvz)
+(/usr/share/texmf-texlive/tex/generic/pstricks/pstricks.tex
+`PSTricks' v1.15  <2006/12/22> (tvz)
 \pst@dima=\dimen117
 \pst@dimb=\dimen118
 \pst@dimc=\dimen119
@@ -150,7 +140,7 @@ Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
 \pst@cntg=\count103
 \pst@cnth=\count104
 \pst@toks=\toks15
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pstricks.con)
+(/usr/share/texmf-texlive/tex/generic/pstricks/pstricks.con)
 \psunit=\dimen123
 \psxunit=\dimen124
 \psyunit=\dimen125
@@ -160,17 +150,19 @@ Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
 \everypsbox=\toks17
 \psframesep=\dimen128
 \pslabelsep=\dimen129
-\pst@shift=\dimen130
+\psk@shift=\dimen130
+\pst@shift=\dimen131
 \theoverlaybox=\box54
 )
-File: pstricks.tex 2009/01/25 v1.27 `PSTricks' (tvz,hv)
+File: pstricks.tex 2006/12/22 v1.15 `PSTricks' (tvz)
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2008/texmf/tex/latex/config/color.cfg
+(/etc/texmf/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
+Package xcolor Info: Package option `override' ignored on input line 216.
 Package xcolor Info: Driver file: dvips.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -181,154 +173,165 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-grad/pst-grad.sty
+(/usr/share/texmf-texlive/tex/latex/pst-grad/pst-grad.sty
 Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-grad/pst-grad.tex
-(/usr/local/texlive/2008/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+(/usr/share/texmf-texlive/tex/generic/pst-grad/pst-grad.tex
+(/usr/share/texmf-texlive/tex/latex/xkeyval/pst-xkey.tex
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 
-(/usr/local/texlive/2008/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+(/usr/share/texmf-texlive/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2006/11/18 v2.5f package option processing (HA)
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf-texlive/tex/latex/xkeyval/xkeyval.tex
 \XKV@toks=\toks18
-\XKV@tempa@toks=\toks19
 \XKV@depth=\count105
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+File: xkeyval.tex 2006/11/18 v2.5f key=value parser (HA)
 )))
-`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
-File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+`pst-plot' v1.05, 2006/11/04 (tvz,dg,hv))
+File: pst-grad.tex 2006/11/04 1.05 `pst-grad' (tvz)
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
-Package: pstricks-add 2007/09/03 v. 0.11 package wrapper for pstricks-add.tex (
-hv)
+(/usr/share/texmf-texlive/tex/latex/pstricks-add/pstricks-add.sty
+Package: pstricks-add 2005/03/03 package wrapper for pstricks-add.tex (hv)
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-plot.tex
-(/usr/local/texlive/2008/texmf-dist/tex/generic/multido/multido.tex
+(/usr/share/texmf-texlive/tex/generic/pstricks-add/pstricks-add.tex
+(/usr/share/texmf-texlive/tex/generic/pstricks/pst-plot.tex
+ v97 patch 2, 1999/12/12
+(/usr/share/texmf-texlive/tex/generic/multido/multido.tex
  v1.41, 2004/05/18 <tvz>
 \multido@count=\count106
 \multidocount=\count107
-\multido@stuff=\toks20
-)  v1.03, 2008/11/24)
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-node.tex
- v1.01, 2008/11/26
+\multido@stuff=\toks19
+))
+(/usr/share/texmf-texlive/tex/generic/pstricks/pst-node.tex
+ v97 patch 11, 2000/11/09
 \psrow=\count108
 \pscol=\count109
 \psmatrixcnt=\count110
 \psrowsep=\skip45
 \pscolsep=\skip46
-)
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-3d/pst-3d.tex
-`PST-3d' v1.00, 2005/09/03 (tvz)) `pstricks-add' v3.18, 2009/03/03 (dr,hv)
-\pst@dimm=\dimen131
-\pst@dimn=\dimen132
-\pst@dimo=\dimen133
-\pst@dimp=\dimen134
+) `pstricks-add' v2.82, 2006/11/22 (dr,hv)
+\pst@dimm=\dimen132
+\pst@dimn=\dimen133
+\pst@dimo=\dimen134
+\pst@dimp=\dimen135
 \pst@cntm=\count111
 \pst@cntn=\count112
 \pst@cnto=\count113
 \pst@cntp=\count114
 \@zero=\count115
-\pstRadUnit=\dimen135
-\pstRadUnitInv=\dimen136
-\pshooklength=\dimen137
-\pshookwidth=\dimen138
+\pstRadUnit=\dimen136
+\pstRadUnitInv=\dimen137
+\pst@braceWidth=\dimen138
+\pshooklength=\dimen139
+\pshookwidth=\dimen140
 \@digitcounter=\count116
-\psk@subticksize=\dimen139
-\pst@xticksizeA=\dimen140
-\pst@xticksizeB=\dimen141
-\pst@xticksizeC=\dimen142
-\pst@yticksizeA=\dimen143
-\pst@yticksizeB=\dimen144
-\pst@yticksizeC=\dimen145
-\psk@llx=\dimen146
-\psk@lly=\dimen147
-\psk@urx=\dimen148
-\psk@ury=\dimen149
-\pst@xunit=\dimen150
-\pst@yunit=\dimen151
+\psk@subticksize=\dimen141
+\pst@xticksizeA=\dimen142
+\pst@xticksizeB=\dimen143
+\pst@xticksizeC=\dimen144
+\pst@yticksizeA=\dimen145
+\pst@yticksizeB=\dimen146
+\pst@yticksizeC=\dimen147
+\psk@llx=\dimen148
+\psk@lly=\dimen149
+\psk@urx=\dimen150
+\psk@ury=\dimen151
+\pst@xunit=\dimen152
+\pst@yunit=\dimen153
 \linecnt=\count117
-\chart@ColorIndex=\dimen152
-\chart@ColorStep=\dimen153
-\pst@chartHeight=\dimen154
-\pst@chartStackDepth=\dimen155
-\pst@chartStackWidth=\dimen156
-\chart@Toggle=\count118
 )
-File: pstricks-add.tex 2009/03/03 v3.18 `PSTricks-add' (hv)
+File: pstricks-add.tex 2006/11/22 v2.82 `PSTricks-add' (hv,dr)
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-math/pst-math.sty
-Package: pst-math 2009/01/20 package wrapper for PSTricks pst-math.tex
+(/usr/share/texmf-texlive/tex/latex/pst-math/pst-math.sty
+Package: pst-math 2004/03/20 package wrapper for PSTricks pst-math.tex
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-math/pst-math.tex
-`pst-math' v0.21 , (CJ,hv))
-File: pst-math.tex 2009/03/03 v0.21 `PST-math' (hv)
-)
-(/usr/local/texlive/2008/texmf-dist/tex/latex/pstricks/pst-node.sty
+(/usr/share/texmf-texlive/tex/generic/pst-math/pst-math.tex
+`pst-math' v0.2 (Rev 1.1, 2004-07-06 23:43:03+02), C.Jorssen))
+(/usr/share/texmf-texlive/tex/latex/pstricks/pst-node.sty
 Package: pst-node 2006/01/01 package wrapper for pst-node.tex
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-node.tex
- v1.01, 2008/11/26)
-File: pst-node.tex 2008/11/26 1.01 `pst-node' (tvz)
+(/usr/share/texmf-texlive/tex/generic/pstricks/pst-node.tex
+ v97 patch 11, 2000/11/09)
+File: pst-node.tex 2000/11/09 97 patch 11 `pst-node' (tvz)
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-tree/pst-tree.sty
-Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+(/usr/share/texmf-texlive/tex/latex/pstricks/pst-tree.sty
+Package: pst-tree 2004/07/15 package wrapper for pst-tree.tex
 
-(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-tree/pst-tree.tex
- v1.10, 2008/12/12
+(/usr/share/texmf-texlive/tex/generic/pstricks/pst-tree.tex
+ v97 patch 6, 2004/07/24
 \pstree@rootbox=\box55
 \pstree@box=\box56
-\psnodecnt=\count119
-\pstreelevel=\count120
-\pstreecnt=\count121
-\pstree@cnt=\count122
-\pstree@stop=\count123
+\psnodecnt=\count118
+\pstreelevel=\count119
+\pstreecnt=\count120
+\pstree@cnt=\count121
+\pstree@stop=\count122
 )
-File: pst-tree.tex 2008/12/12 1.10 `pst-tree' (tvz,hv)
+File: pst-tree.tex 2004/07/24 97 patch 6 `pst-tree' (tvz)
 ) (./poster.aux)
 \openout1 = `poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-File: splitPdf/01_pdfsam_test.eps Graphic file (type eps)
- <splitPdf/01_pdfsam_test.eps>
-Overfull \hbox (68.90834pt too wide) in paragraph at lines 160--162
- [] 
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+
+Overfull \hbox (44.22723pt too wide) in paragraph at lines 139--140
+ [][] 
  []
 
+File: splitPdf/01_pdfsam_test.eps Graphic file (type eps)
+<splitPdf/01_pdfsam_test.eps>
 File: splitPdf/02_pdfsam_test.eps Graphic file (type eps)
-<splitPdf/02_pdfsam_test.eps>
-Overfull \hbox (68.90834pt too wide) in paragraph at lines 171--172
- [] 
+ <splitPdf/02_pdfsam_test.eps>
+Overfull \hbox (48.74117pt too wide) in paragraph at lines 154--172
+[]$[]$
+ []
+
+
+Overfull \hbox (48.74117pt too wide) in paragraph at lines 154--172
+[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--172
+
  []
 
 File: splitPdf/03_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/03_pdfsam_test.eps>
-Overfull \hbox (68.90834pt too wide) in paragraph at lines 178--180
- [] 
+Overfull \hbox (48.74117pt too wide) in paragraph at lines 173--181
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--181
+
  []
 
 File: splitPdf/05_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/05_pdfsam_test.eps>
-Overfull \hbox (42.67912pt too wide) in paragraph at lines 189--198
+Overfull \hbox (42.67914pt too wide) in paragraph at lines 186--193
 []$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--193
+
  []
 
 File: splitPdf/04_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/04_pdfsam_test.eps>
-Overfull \hbox (42.67912pt too wide) in paragraph at lines 199--206
+Overfull \hbox (42.67914pt too wide) in paragraph at lines 199--206
 []$[]$
  []
 
@@ -339,66 +342,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--206
 
 File: splitPdf/06_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/06_pdfsam_test.eps>
-Overfull \hbox (68.90834pt too wide) in paragraph at lines 215--217
- [] 
+Overfull \hbox (48.74117pt too wide) in paragraph at lines 213--224
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--224
+
  []
 
 File: splitPdf/07_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/07_pdfsam_test.eps>
-Overfull \hbox (68.90834pt too wide) in paragraph at lines 226--227
- [] 
+Overfull \hbox (48.74117pt too wide) in paragraph at lines 225--234
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--234
+
  []
 
 File: splitPdf/08_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/08_pdfsam_test.eps>
-Overfull \hbox (68.90834pt too wide) in paragraph at lines 236--239
- [] 
+Overfull \hbox (48.74117pt too wide) in paragraph at lines 235--242
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--242
+
  []
 
 File: splitPdf/09_pdfsam_test.eps Graphic file (type eps)
 <splitPdf/09_pdfsam_test.eps>
 File: splitPdf/10_pdfsam_test.eps Graphic file (type eps)
  <splitPdf/10_pdfsam_test.eps>
-Overfull \hbox (42.67912pt too wide) in paragraph at lines 244--259
+Overfull \hbox (42.67914pt too wide) in paragraph at lines 248--263
 []$[]$
  []
 
 
-Overfull \hbox (42.67912pt too wide) in paragraph at lines 244--259
+Overfull \hbox (42.67914pt too wide) in paragraph at lines 248--263
 []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--259
+Underfull \hbox (badness 10000) in paragraph at lines 248--263
 
  []
 
 [1
 
-]
-Overfull \vbox (53.5225pt too high) has occurred while \output is active []
-
-
-[2] (./poster.aux) ) 
+] [2] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD:MCTS/poster/poster.log
  3568 strings out of 95087
  48078 string characters out of 1183279
- 158766 words of memory out of 1500000
+ 157766 words of memory out of 1500000
  6708 multiletter control sequences out of 10000+50000
  7954 words of font info for 29 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 37i,7n,51p,275b,511s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 37i,7n,51p,275b,495s stack positions out of 5000i,500n,6000p,200000b,5000s
 
-Output written on poster.dvi (2 pages, 4428 bytes).
-=======
- 3997 strings out of 493877
- 58475 string characters out of 1150590
- 183002 words of memory out of 3000000
- 7230 multiletter control sequences out of 10000+50000
- 7954 words of font info for 29 fonts, out of 3000000 for 5000
- 714 hyphenation exceptions out of 8191
- 32i,8n,52p,275b,1549s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on poster.dvi (2 pages, 8472 bytes).
->>>>>>> 5cb26c33e6842999a2cff6f28ce41a0331f77ba4:MCTS/poster/poster.log
+Output written on poster.dvi (2 pages, 3680 bytes).
