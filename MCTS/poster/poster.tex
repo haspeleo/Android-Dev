@@ -161,8 +161,8 @@
 \begin{minipage}[c][9cm][c]{0.78\textwidth}
   \begin{center}
     {\sc \Huge    Monte-Carlo Tree Search}\\[10mm]
-    {\Large Hassen Doghmen\\[7.5mm]
-    Tao, Inria Saclay-IDF}
+    {\Large Olivier Teytaud, Hassen Doghmen\\[7.5mm]
+    Tao, INRIA Saclay-IDF}
   \end{center}
 \end{minipage}
 
@@ -182,13 +182,13 @@
     %\includegraphics[width=7cm,angle=0]{gklogo.eps}
   \end{center}
 \end{minipage}
+
+%------------------------------------------
 %%% Titel
 \begin{minipage}[c][5cm][c]{0.78\textwidth}
 
 \Large
-We adapt the EXP3 Algorithm, an efficient algorithm solving the adversarial bandit problem, to the case of tree-structured partially observable games. Every player
-will select his/her strategy along repeated games  with a Monte-Carlo Tree Search algorithm, receiving observations from other players
-via a referee. We give experimental results for the game of Phantom Tic-Tac-Toe.
+ABSTRACT HERE.................
 \end{minipage}
 
 
@@ -196,9 +196,8 @@ via a referee. We give experimental results for the game of Phantom Tic-Tac-Toe.
 \end{pcolumn}
 \end{center}
 
-
-
-\vspace*{2cm}
+%------------------------------------------
+\vspace*{12cm} %space  for the abstract 
 
 
 
@@ -218,45 +217,16 @@ via a referee. We give experimental results for the game of Phantom Tic-Tac-Toe.
 \vspace{1.25cm}
 
 
-\includegraphics[width=8.0cm]{bandit.eps}
-\includegraphics[width=8.0cm]{bandit.eps}
-\includegraphics[width=8.0cm]{bandit.eps}
+\includegraphics[width=30.0cm]{01_pdfsam_test.ps}
 
 
 \begin{center}
-$K$ one-armed bandit slot machines. 
+Minimax algo
 \end{center}
 
-$\blue \bullet$ At each new timestep the player :
-
-- pulls an arm $i_t$ according to his strategy, which can depend on past observation and be randomized
-
-- observes the reward $r_{i_t}(t)$ of the chosen arm $i_t$ 
-
-$\blue \bullet$ {\bf Stochastic Setting}: rewards are given by stationnary unknown probability distributions $r_i$
-
-$\blue \bullet$ {\bf Adversarial Setting}: an opponent, aware of the player's past decisions and rewards, chooses simultaneously with the player a (possibly randomized)
-reward $r_i(t)$ for each arm.
-
-\begin{center}
-  What can you do in the adversarial case ?
-\end{center}
-
-$\blue \bullet$ impossible to ``maximize'' reward
-
-$\blue \bullet$ You can try to minimize the {\bf external regret}: 
-difference at time $T$ between one's gain and
-the gain which could have been obtained by allways pulling {\it the same} arm
-
-$$R_T = \max_{i=1\ldots k} \left( \sum_{t=1}^{T} r_i(t) \right) - \sum_{t=1}^T r_{i_t} (t)$$
-
-
-\begin{center}
-  \bf External regret can be minimized (in expectation or with high probability) by the EXP3 Algorithm \cite{auer03}
-\end{center}
 }
 \end{pcolumn}
-
+%------------------------------------------------------------------------------------------
 \vspace{.5cm}
 \begin{pcolumn}{0.32}
 
