@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
     
     double x1, x2;
     int n1, n2;
-    double confidence;
+    double alpha;
     
     cout<<"*** STATISTICS ***"<<endl;
     cout<<"Z-Test for propotions, 2 samples"<<endl;
@@ -28,9 +28,9 @@ int main(int argc, char** argv) {
     cin >> x1 >> n1 >> x2 >> n2;
     
     cout<<"Give confidence in % (95 for example):"<<endl;
-    cin >> confidence;
+    cin >> alpha;
     
-    z_TestForTwoSamples(x1, n1, x2, n2);
+    z_TestForTwoSamples(x1, n1, x2, n2, alpha);
     
     return 0;
 }

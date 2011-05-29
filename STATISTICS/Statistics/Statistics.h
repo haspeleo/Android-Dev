@@ -15,7 +15,7 @@
 
 
 double standardDeviation(std::vector<double> samples);
-void z_TestForTwoSamples(double x1, int n1, double x2, int n2);
+void z_TestForTwoSamples(double x1, int n1, double x2, int n2, double alpha);
 
 
 
