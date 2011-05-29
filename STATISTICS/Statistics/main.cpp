@@ -10,16 +10,28 @@
 #include <cstdlib>
 #include <iostream>
 
+#include"Statistics.h"13
+
 using namespace std;
 
-/*
- * 
- */
+
+
 int main(int argc, char** argv) {
     
+    double x1, x2;
+    int n1, n2;
+    double confidence;
     
-    std::cout<<"*** STATISTICS ***"<<std::endl;
-
+    cout<<"*** STATISTICS ***"<<endl;
+    cout<<"Z-Test for propotions, 2 samples"<<endl;
+    cout<<"Give 2 fractions:"<<endl;
+    cin >> x1 >> n1 >> x2 >> n2;
+    
+    cout<<"Give confidence in % (95 for example):"<<endl;
+    cin >> confidence;
+    
+    z_TestForTwoSamples(x1, n1, x2, n2);
+    
     return 0;
 }
 
