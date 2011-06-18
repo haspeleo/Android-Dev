@@ -1,0 +1,10 @@
+graph Hello {
+//Once GraphViz installed, write a dot file 
+//visualize it with GraphViz
+//comment: hello world with dot 
+//graph with a single node Node1
+
+Node1 [label = "Hello World !"]
+
+}
+
