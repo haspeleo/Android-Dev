@@ -1,0 +1,15 @@
+#! /bin/sh 
+
+#http://geekblog.over-blog.com/article-6305114.html // tableaux en shell
+
+
+cell=(A B C);
+
+
+for index in "${!cell[@]}"
+do 
+for i in `seq 3`
+
+echo "${cell[$index]}1    -> ${cell[$index]}$i  "  
+
+done
