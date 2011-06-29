@@ -3,6 +3,22 @@
 
 using namespace std;
 
+
+
+class Node;
+class Edge;
+
+void Dijkstras();
+vector<Node*>* AdjacentRemainingNodes(Node* node);
+Node* ExtractSmallest(vector<Node*>& nodes);
+int Distance(Node* node1, Node* node2);
+bool Contains(vector<Node*>& nodes, Node* node);
+void PrintShortestRouteTo(Node* destination);
+
+vector<Node*> nodes;
+vector<Edge*> edges;
+
+
 void PrintShortestRouteTo(Node* destination)
 {
 	Node* previous = destination;
