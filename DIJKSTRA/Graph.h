@@ -3,16 +3,18 @@
 #define INT_MAX 10
 
 
+void PrintShortestRouteTo(Node* destination);
+int Distance(Node* node1, Node* node2);
+bool Contains(vector<Node*>& nodes, Node* node);
+vector<Node*>* AdjacentRemainingNodes(Node* node);
+Node* ExtractSmallest(vector<Node*>& nodes);
+void Dijkstras();
+void DijkstrasTest();
+
+
 class Node;
 class Edge;
 
-//void Dijkstras();
-//vector<Node*>* AdjacentRemainingNodes(Node* node);
-//Node* ExtractSmallest(vector<Node*>& nodes);
-//int Distance(Node* node1, Node* node2);
-//bool Contains(vector<Node*>& nodes, Node* node);
-//void PrintShortestRouteTo(Node* destination);
-//
 vector<Node*> nodes;
 vector<Edge*> edges;
 

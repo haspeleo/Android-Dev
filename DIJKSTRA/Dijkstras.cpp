@@ -4,20 +4,18 @@
 //#include "stdafx.h"
 #include <iostream>
 #include <vector>
+
 #define INT_MAX 100
 
 using namespace std;
 
 void DijkstrasTest();
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 	DijkstrasTest();
+
 	return 0;
 }
-
-
-//////////////
 
 class Node;
 class Edge;
@@ -32,8 +30,7 @@ void PrintShortestRouteTo(Node* destination);
 vector<Node*> nodes;
 vector<Edge*> edges;
 
-class Node
-{
+class Node {
 public:
 	Node(char id) 
 		: id(id), previous(NULL), distanceFromStart(INT_MAX)
@@ -47,22 +44,21 @@ public:
 };
 
 
-class Edge
-{
+class Edge {
 public:
 	Edge(Node* node1, Node* node2, int distance) 
 		: node1(node1), node2(node2), distance(distance)
 	{
 		edges.push_back(this);
 	}
-	bool Connects(Node* node1, Node* node2)
-	{
+	bool Connects(Node* node1, Node* node2)	{
 		return (
 			(node1 == this->node1 &&
 			node2 == this->node2) ||
 			(node1 == this->node2 && 
 			node2 == this->node1));
 	}
+
 public:
 	Node* node1;
 	Node* node2;
@@ -70,8 +66,7 @@ public:
 };
 
 ///////////////////
-void DijkstrasTest()
-{
+void DijkstrasTest() {
 	Node* a = new Node('a');
 	Node* b = new Node('b');
 	Node* c = new Node('c');
@@ -99,17 +94,14 @@ void DijkstrasTest()
 
 ///////////////////
 
-void Dijkstras()
-{
-	while (nodes.size() > 0)
-	{
+void Dijkstras() {
+	while (nodes.size() > 0) {
 		Node* smallest = ExtractSmallest(nodes);
 		vector<Node*>* adjacentNodes = 
 			AdjacentRemainingNodes(smallest);
 
 		const int size = adjacentNodes->size();
-		for (int i=0; i<size; ++i)
-		{
+		for (int i=0; i<size; ++i) {
 			Node* adjacent = adjacentNodes->at(i);
 			int distance = Distance(smallest, adjacent) +
 				smallest->distanceFromStart;
@@ -126,8 +118,7 @@ void Dijkstras()
 
 // Find the node with the smallest distance,
 // remove it, and return it.
-Node* ExtractSmallest(vector<Node*>& nodes)
-{
+Node* ExtractSmallest(vector<Node*>& nodes) {
 	int size = nodes.size();
 	if (size == 0) return NULL;
 	int smallestPosition = 0;
